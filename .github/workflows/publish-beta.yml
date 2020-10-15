@@ -1,0 +1,23 @@
+name: publish
+
+on:
+  push:
+    branches:
+      - beta
+
+jobs:
+  eslint-config-publish-github:
+    name: Publish to Github Package Registry
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      # Setup .npmrc file to publish to GitHub Packages
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@uservoice'
+      - run: npm install
+      - run: npm publish --tag beta
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
