@@ -43,16 +43,12 @@ To test modifications to linting rules, developers can utilize the /rules folder
 
 #### "Staging" Configuration Changes
 
-What if you want to test linting changes on an existing project before pushing to the `main` branch?
+Attach a `-beta.0` version to `package.json`, and push your changes to the `beta` branch. This will kick off a
+GitHub CI action to publish the beta version to the registry.
 
-To authenticate to GitHub's NPM registry, use the npm login command, replacing USERNAME with your GitHub username, TOKEN
-with your personal access token, and PUBLIC-EMAIL-ADDRESS with your email address.
+> In the future, the staging workflow may be improved such that versioning is more automated.
 
-```
-$ npm login --registry=https://npm.pkg.github.com
-> Username: USERNAME
-> Password: TOKEN
-> Email: PUBLIC-EMAIL-ADDRESS
-```
+#### Publishing Configuration Changes
 
-Next, change the version in `package.json` to a staging-friendly number, i.e. `2.0.1-beta.0`
+Remove any `-beta` version tags in the beta branch and push to `main`. Once pushed, the new package should be bundled
+and available in a matter of minutes.
