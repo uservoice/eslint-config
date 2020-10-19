@@ -10,13 +10,13 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "peerDependencies": {
+    "eslint": "*",
     "typescript": "*"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^4.4.1",
     "@typescript-eslint/parser": "^4.4.1",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.11.0",
     "eslint-config-react-app": "^6.0.0-next.98",
     "eslint-plugin-flowtype": "^5.2.0",
     "eslint-plugin-import": "^2.22.1",
@@ -27,6 +27,7 @@
     "eslint-plugin-tailwind": "^0.2.0"
   },
   "devDependencies": {
+    "eslint": "^7.11.0",
     "react": "^16.14.0",
     "tailwindcss": "1.9.2",
     "typescript": "^4.0.3"
