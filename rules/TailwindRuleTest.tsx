@@ -4,7 +4,7 @@ import React, { ReactElement } from 'react';
 export function TailwindRuleTestFail (): ReactElement {
   return (
     // Remove the next line to test lint warning
-    // eslint-disable-next-line tailwind/class-order
+    // eslint-disable-next-line tailwindcss/no-contradicting-classname
     <div className="border rounded fixed bg-green-500 relative" />
   );
 }
@@ -12,6 +12,6 @@ export function TailwindRuleTestFail (): ReactElement {
 // Successful lint rule (fixed with eslint --fix)
 export function TailwindRuleTestSuccess (): ReactElement {
   return (
-    <div className="fixed relative bg-green-500 border rounded" />
+    <div className="relative bg-green-500 rounded border" />
   );
 }
