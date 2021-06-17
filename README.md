@@ -4,15 +4,7 @@ A common ESLint configuration for JavaScript/TypeScript projects at UserVoice
 
 ---
 
-### New Project Usage
-
-Make sure the UserVoice NPM registry is discoverable in the project:
-
-```
-//> .npmrc
-
-registry=https://npm.pkg.github.com/uservoice
-```
+### Installation
 
 Install the dependency:
 
@@ -43,12 +35,16 @@ To test modifications to linting rules, developers can utilize the /rules folder
 
 #### "Staging" Configuration Changes
 
-Attach a `-beta.0` version to `package.json`, and push your changes to the `beta` branch. This will kick off a
+Attach a `-beta.0` version (incrementing as necessary) to `package.json`, and push your changes to the 
+`beta` branch. This 
+will 
+kick 
+off a
 GitHub CI action to publish the beta version to the registry.
 
-> In the future, the staging workflow may be improved such that versioning is more automated.
+> NOTE: In the future, the staging workflow may be improved such that versioning is more automated.
 
 #### Publishing Configuration Changes
 
-Remove any `-beta` version tags in the beta branch and push to `main`. Once pushed, the new package should be bundled
-and available in a matter of minutes.
+Remove any `-beta` version tags in the beta branch and create a pull request from the `beta` branch to `main`. Once 
+pushed, the new package should be bundled and available in a matter of minutes.
