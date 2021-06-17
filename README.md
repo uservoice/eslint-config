@@ -36,11 +36,7 @@ To test modifications to linting rules, developers can utilize the /rules folder
 #### "Staging" Configuration Changes
 
 Attach a `-beta.0` version (incrementing as necessary) to `package.json`, and push your changes to the 
-`beta` branch. This 
-will 
-kick 
-off a
-GitHub CI action to publish the beta version to the registry.
+`beta` branch. This will kick off a GitHub CI action to publish the beta version to the registry.
 
 > NOTE: In the future, the staging workflow may be improved such that versioning is more automated.
 
