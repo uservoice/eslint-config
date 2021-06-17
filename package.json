@@ -6,9 +6,6 @@
     "type": "git",
     "url": "https://github.com/uservoice/eslint-config"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "peerDependencies": {
     "eslint": "*",
     "typescript": "*"
